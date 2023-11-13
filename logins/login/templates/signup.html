@@ -1,0 +1,22 @@
+<h1>Signup</h1>
+<form method="POST">
+    {% csrf_token %}
+    <div>
+        <label for="">Username</label>
+        {{form.username}}
+        <label for="">Password</label>
+        {{form.password1}}
+        <label for="">Confirmar Password</label>
+        {{form.password2}}
+    </div>
+    <button type="submit">Signup</button>
+    <a href="{% url 'login' %}">Already have account?</a>
+</form>
+
+<!-- <h1>Signup</h1>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Signup</button>
+    <a href="{% url 'login' %}">Already have account?</a>
+</form> -->
